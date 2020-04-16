@@ -1,0 +1,14 @@
+description = "foot"
+
+[viewBag]
+==
+<div >
+        {% for section in this.theme.sections %}
+        {% if loop.last %}
+        <script>
+        var lastSectionPosition = document.getElementById({{ section.id }}).scrollTop;
+        var pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        
+        {% endif %}
+        {% endfor %}
+</div>

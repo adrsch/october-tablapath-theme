@@ -1,0 +1,363 @@
+tabs:
+    fields:
+        siteTitle:
+            tab: General
+            label: Site title
+            type: text
+            default: My Site
+        siteDescription:
+            tab: General
+            type: text
+            default: Hello world
+        locale:
+            tab: General
+            label: Locale
+            type: text
+            default: en
+        keywords:
+            tab: General
+            label: Keywords
+            type: taglist
+            separator: comma
+            default: tablapath
+        pageWidth:
+            tab: General
+            label: Page width
+            type: text
+            default: 960px
+        resources:
+            tab: General
+            label: Other head code
+            type: textarea
+        linkColor:
+            tab: General
+            label: Link color
+            type: colorpicker
+            default: mediumblue
+        hoverColor:
+            tab: General
+            label: Link color
+            type: colorpicker
+            default: steelblue
+
+        pFamily:
+            tab: Typography
+            label: Paragraph font
+            type: text
+            default: Lato
+            span: left
+        pWeight:
+            tab: Typography
+            label: Paragraph font weight
+            type: text
+            default: normal
+            span: right
+        pSize: 
+            tab: Typography
+            label: Paragraph font size
+            type: text
+            default: 1.125rem
+            span: left
+        pSpacing:
+            tab: Typography
+            label: Paragraph letter spacing
+            type: text
+            default: normal
+            span: right
+        h1Family:
+            tab: Typography
+            label: h1 font
+            type: text
+            default: Lato
+            span: left
+        h1Weight:
+            tab: Typography
+            label: h1 font weight
+            type: text
+            default: normal
+            span: right
+        h1Size: 
+            tab: Typography
+            label: h1 font size
+            type: text
+            default: 3.5rem
+            span: left
+        h1Spacing:
+            tab: Typography
+            label: h1 letter spacing
+            type: text
+            default: normal
+            span: right
+        h2Family:
+            tab: Typography
+            label: h2 font
+            type: text
+            default: Lato
+            span: left
+        h2Weight:
+            tab: Typography
+            label: h2 font weight
+            type: text
+            default: 700
+            span: right
+        h2Size: 
+            tab: Typography
+            label: h2 font size
+            type: text
+            default: 3rem
+            span: left
+        h2Spacing:
+            tab: Typography
+            label: h2 letter spacing
+            type: text
+            default: normal
+            span: right
+        h3Family:
+            tab: Typography
+            label: h3 font
+            type: text
+            default: Lato
+            span: left
+        h3Weight:
+            tab: Typography
+            label: h3 font weight
+            type: text
+            default: 700
+            span: right
+        h3Size: 
+            tab: Typography
+            label: h3 font size
+            type: text
+            default: 2rem
+            span: left
+        h3Spacing:
+            tab: Typography
+            label: h3 letter spacing
+            type: text
+            default: normal
+            span: right
+        h4Family:
+            tab: Typography
+            label: h4 font
+            type: text
+            default: Lato
+            span: left
+        h4Weight:
+            tab: Typography
+            label: h4 font weight
+            type: text
+            default: 700
+            span: right
+        h4Size: 
+            tab: Typography
+            label: h4 font size
+            type: text
+            default: 1.5rem
+            span: left
+        h4Spacing:
+            tab: Typography
+            label: h4 letter spacing
+            type: text
+            default: normal
+            span: right
+        h5Family:
+            tab: Typography
+            label: h5 font
+            type: text
+            default: Lato
+            span: left
+        h5Weight:
+            tab: Typography
+            label: h5 font weight
+            type: text
+            default: 700
+            span: right
+        h5Size: 
+            tab: Typography
+            label: h5 font size
+            type: text
+            default: 1.125rem
+            span: left
+        h5Spacing:
+            tab: Typography
+            label: h5 letter spacing
+            type: text
+            default: normal
+            span: right
+        h6Family:
+            tab: Typography
+            label: h6 font
+            type: text
+            default: Lato
+            span: left
+        h6Weight:
+            tab: Typography
+            label: h6 font weight
+            type: text
+            default: 700
+            span: right
+        h6Size: 
+            tab: Typography
+            label: h6 font size
+            type: text
+            default: 1rem
+            span: left
+        h6Spacing:
+            tab: Typography
+            label: h6 letter spacing
+            type: text
+            default: normal
+            span: right
+
+        coverContent:
+            tab: Intro
+            label: Content
+            type: richeditor
+        coverColor:
+            tab: Intro
+            label: Text Color
+            type: colorpicker
+            default: white
+        coverBackgroundColor:
+            tab: Intro
+            label: Background Color
+            type: colorpicker
+            default: darkseagreen
+        coverOverlay:
+            tab: Intro
+            label: Overlay Color
+            type: colorpicker
+            default: darkseagreen
+        coverOverlayOpacity:
+            tab: Intro
+            label: Overlay Opacity
+            type: number
+        cover:
+            tab: Intro
+            label: Background Image
+            mode: image
+            type: mediafinder
+        useSlideShow:
+            tab: Intro
+            label: Use slide show?
+            type: switch
+            default: 0
+        coverSlideShow:
+            tab: Intro
+            label: Slide show images
+            type: repeater
+            form:
+                fields:
+                    image:
+                        label: Slide show image
+                        mode: image
+                        type: mediafinder
+        
+        sections:
+            tab: Sections
+            label: Sections
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Full Title
+                        type: text
+                        default: My Section
+                    short:
+                        label: Short Title (for navigation)
+                        type: text
+                        span: left
+                        default: Section
+                    id:
+                        label: Slug/Unique Section ID
+                        type: text
+                        span: right
+                        default: my-section
+                    showOnNav:
+                        label: Show section on navigation?
+                        type: switch
+                        default: 1
+                    titleParentBackground:
+                        label: Use site-wide background for title?
+                        type: switch
+                        default: 0
+                    parentBackground:
+                        label: Use site-wide background for section?
+                        type: switch
+                        default: 0
+                    backgroundColor:
+                        label: Background Color
+                        type: colorpicker
+                        default: darkslategray
+                    textColor:
+                        label: Text Color
+                        type: colorpicker
+                        default: white
+                    content:
+                        label: Content File Name
+                        type: text
+                        default: example.htm
+        navWidth:
+            tab: Navigation
+            label: Navigation Width
+            type: text
+            default: 200px
+        navBackgroundColor:
+            tab: Navigation
+            label: Background Color
+            type: colorpicker
+            default: darkslategray
+        navColor:
+            tab: Navigation
+            label: Text Color
+            type: colorpicker
+            default: white
+        navHover:
+            tab: Navigation
+            label: Text Color (hover)
+            type: colorpicker
+            default: aqua
+        navFamily:
+            tab: Navigation
+            label: Font
+            type: text
+            default: Lato
+            span: left
+        navWeight:
+            tab: Navigation
+            label: Font Weight
+            type: text
+            default: 900
+            span: right
+        navSize: 
+            tab: Navigation
+            label: Font Size
+            type: text
+            default: 1.875rem
+            span: left
+        navSpacing:
+            tab: Navigation
+            label: Letter Spacing
+            type: text
+            default: normal
+            span: right
+        footBackground:
+            tab: Footer
+            label: Use site-wide background for section?
+            type: switch
+            default: 0
+        footBackgroundColor:
+            tab: Footer
+            label: Background Color
+            type: colorpicker
+            default: darkslategray
+        footTextColor:
+            tab: Footer
+            label: Text Color
+            type: colorpicker
+            default: white
+        footContent:
+            tab: Footer
+            label: Content File Name
+            type: text
+            default: footer.htm

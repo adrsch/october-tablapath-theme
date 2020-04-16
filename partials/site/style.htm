@@ -1,0 +1,82 @@
+[viewBag]
+==
+<style>
+    .content {
+        width: {{ this.theme.pageWidth }}
+    }
+    
+    nav {
+        width: {{ this.theme.navWidth }};
+        left: calc(100% - {{ this.theme.navWidth }});
+        background-color: {{ this.theme.navBackgroundColor }};
+    }
+    
+    nav a {
+        color: {{ this.theme.navColor }};
+        font-family: '{{ this.theme.navFamily}}', sans-serif;
+        font-weight: {{ this.theme.navWeight }};
+        font-size: {{ this.theme.navSize }};
+        letter-spacing: {{ this.theme.navSpacing }};
+    }
+    
+    nav a:hover {
+        color: {{ this.theme.navHover }};
+    }
+    
+    a {
+        color: {{ this.theme.linkColor }};
+    }
+    
+    a:hover {
+        color: {{ this.theme.hoverColor }};
+    }
+    
+    p, ul { 
+        font-family: '{{ this.theme.pFamily}}', sans-serif;
+        font-weight: {{ this.theme.pWeight }};
+        font-size: {{ this.theme.pSize }};
+        letter-spacing: {{ this.theme.pSpacing }};
+    }
+
+    h1 { 
+        font-family: '{{ this.theme.h1Family}}', sans-serif;
+        font-weight: {{ this.theme.h1Weight }};
+        font-size: {{ this.theme.h1Size }};
+        letter-spacing: {{ this.theme.h1Spacing }};
+    }
+    
+    h2 { 
+        font-family: '{{ this.theme.h2Family}}', sans-serif;
+        font-weight: {{ this.theme.h2Weight }};
+        font-size: {{ this.theme.h2Size }};
+        letter-spacing: {{ this.theme.h2Spacing }};
+    }
+    
+    h3 { 
+        font-family: '{{ this.theme.h3Family}}', sans-serif;
+        font-weight: {{ this.theme.h3Weight }};
+        font-size: {{ this.theme.h3Size }};
+        letter-spacing: {{ this.theme.h3Spacing }};
+    }
+    
+    h4 { 
+        font-family: '{{ this.theme.h4Family}}', sans-serif;
+        font-weight: {{ this.theme.h4Weight }};
+        font-size: {{ this.theme.h4Size }};
+        letter-spacing: {{ this.theme.h4Spacing }};
+    }
+    
+    h5 { 
+        font-family: '{{ this.theme.h5Family}}', sans-serif;
+        font-weight: {{ this.theme.h5Weight }};
+        font-size: {{ this.theme.h5Size }};
+        letter-spacing: {{ this.theme.h5Spacing }};
+    }
+    
+    h6 { 
+        font-family: '{{ this.theme.h6Family}}', sans-serif;
+        font-weight: {{ this.theme.h6Weight }};
+        font-size: {{ this.theme.h6Size }};
+        letter-spacing: {{ this.theme.h6Spacing }};
+    }
+</style>

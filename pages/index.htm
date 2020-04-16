@@ -1,0 +1,31 @@
+title = "Homepage"
+url = "/"
+layout = "main"
+is_hidden = 0
+==
+{% for section in this.theme.sections %}
+{% if section.titleParentBackground %}
+<div id="{{ section.id }}" class="section" style="color: {{ this.theme.coverColor }};">
+{% else %}
+<div id="{{ section.id }}" class="section" style="color: {{ section.textColor }}; background-color: {{ section.backgroundColor }};">
+{% endif %}
+    <div class="container">
+        <div class="content">
+            <h2 class="section-title">{{ section.title }}</h2>
+        </div>
+    </div>
+    {% if section.parentBackground %}
+    <div class="section" style="color: {{ section.textColor }};">
+    {% else %}
+    <div class="section" style="color: {{ section.textColor }}; background-color: {{ section.backgroundColor }};">
+    {% endif %}
+        <div class="container">
+            <div class="content">
+                {% if section.content != "" %}
+                {% content section.content %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
