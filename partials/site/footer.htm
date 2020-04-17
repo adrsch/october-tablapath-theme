@@ -6,9 +6,31 @@ description = "foot"
         {% for section in this.theme.sections %}
         {% if loop.last %}
         <script>
-        var lastSectionPosition = document.getElementById({{ section.id }}).scrollTop;
-        var pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-        
+        var lastSection = document.getElementById('{{ section.slug }}');
+	    var lastSectionPosition = (
+            window.pageYOffset || document.documentElement.scrollTop
+        );
+        var pageHeightArray = [];
+        var tryAppendHeight = function(getHeight) {
+            try {
+                pageHeightArray.push(getHeight());
+            }
+            catch(error) {
+            //Browser compatibility -- hopefully one of these will work!
+            }
+        }
+        var body = document.getElementsByTagName('body')[0];
+        var html = document.getElementsByTagName('html')[0];
+        tryAppendHeight(() => { return body.scrollHeight; });
+        tryAppendHeight(() => { return body.offsetHeight; });
+        tryAppendHeight(() => { return html.clientHeight; });
+        tryAppendHeight(() => { return html.scrollHeight; });
+        tryAppendHeight(() => { return html.offsetHeight; });
+        var pageHeight = Math.max.apply(null, pageHeightArray);
+        console.log(pageHeight);
+        console.log(lastSectionPosition);
+        lastSection.style.minHeight = (pageHeight - lastSectionPosition) + 'px';
+        </script>
         {% endif %}
         {% endfor %}
 </div>

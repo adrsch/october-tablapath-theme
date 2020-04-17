@@ -268,7 +268,7 @@ tabs:
                         type: text
                         span: left
                         default: Section
-                    id:
+                    slug:
                         label: Slug/Unique Section ID
                         type: text
                         span: right

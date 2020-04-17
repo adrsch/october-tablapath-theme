@@ -5,9 +5,9 @@ is_hidden = 0
 ==
 {% for section in this.theme.sections %}
 {% if section.titleParentBackground %}
-<div id="{{ section.id }}" class="section" style="color: {{ this.theme.coverColor }};">
+<div id="{{ section.slug }}" class="section" style="color: {{ this.theme.coverColor }};">
 {% else %}
-<div id="{{ section.id }}" class="section" style="color: {{ section.textColor }}; background-color: {{ section.backgroundColor }};">
+<div id="{{ section.slug }}" class="section" style="color: {{ section.textColor }}; background-color: {{ section.backgroundColor }};">
 {% endif %}
     <div class="container">
         <div class="content">
