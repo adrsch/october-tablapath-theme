@@ -2,12 +2,14 @@ description = "Navigation"
 
 [viewBag]
 ==
-<nav role="navigation">
-    <ul>
-        {% for section in this.theme.sections %}
-        {% if section.showOnNav %}
-        <li><a href="#{{ section.slug }}" class="nav-item">{{ section.short }}</a></li>
-        {% endif %}
-        {% endfor %}
-    </ul>
-</nav>
+<header>
+    <nav role="navigation">
+        <ul>
+            {% for section in this.theme.sections %}
+            {% if section.showOnNav %}
+            <li><a href="#{{ section.slug }}" class="nav-item">{{ section.short }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

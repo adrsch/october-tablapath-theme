@@ -341,22 +341,22 @@ tabs:
             type: text
             default: normal
             span: right
-        footBackground:
+        footerSiteBackground:
             tab: Footer
             label: Use site-wide background for section?
             type: switch
             default: 0
-        footBackgroundColor:
+        footerBackgroundColor:
             tab: Footer
             label: Background Color
             type: colorpicker
             default: darkslategray
-        footTextColor:
+        footerTextColor:
             tab: Footer
             label: Text Color
             type: colorpicker
             default: white
-        footContent:
+        footerContent:
             tab: Footer
             label: Content File Name
             type: text

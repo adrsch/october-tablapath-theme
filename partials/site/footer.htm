@@ -2,35 +2,22 @@ description = "foot"
 
 [viewBag]
 ==
-<div >
-        {% for section in this.theme.sections %}
-        {% if loop.last %}
-        <script>
-        var lastSection = document.getElementById('{{ section.slug }}');
-	    var lastSectionPosition = (
-            window.pageYOffset || document.documentElement.scrollTop
-        );
-        var pageHeightArray = [];
-        var tryAppendHeight = function(getHeight) {
-            try {
-                pageHeightArray.push(getHeight());
-            }
-            catch(error) {
-            //Browser compatibility -- hopefully one of these will work!
-            }
-        }
-        var body = document.getElementsByTagName('body')[0];
-        var html = document.getElementsByTagName('html')[0];
-        tryAppendHeight(() => { return body.scrollHeight; });
-        tryAppendHeight(() => { return body.offsetHeight; });
-        tryAppendHeight(() => { return html.clientHeight; });
-        tryAppendHeight(() => { return html.scrollHeight; });
-        tryAppendHeight(() => { return html.offsetHeight; });
-        var pageHeight = Math.max.apply(null, pageHeightArray);
-        console.log(pageHeight);
-        console.log(lastSectionPosition);
-        lastSection.style.minHeight = (pageHeight - lastSectionPosition) + 'px';
-        </script>
-        {% endif %}
-        {% endfor %}
-</div>
+{% if this.theme.footerSiteBackground %}
+<footer style="color:{{ this.theme.footerTextColor }}">
+{% else %}
+<footer style="background-color:{{ this.theme.footerBackgroundColor }}; color:{{ this.theme.footerTextColor }}">
+{% endif %}
+    {% content this.theme.footerContent %}
+    
+    <script>
+    // Set a minimum height to ensure screen can fit the last section plus the footer   
+    {% for section in this.theme.sections %}
+    {% if loop.last %} 
+    let lastSectionPosition = document.getElementById('{{ section.slug }}').getBoundingClientRect().top;  
+    {% endif %}
+    {% endfor %} 
+    let footer = document.getElementsByTagName('footer')[0]
+    let footerPosition = footer.getBoundingClientRect().top;
+    footer.style.minHeight = 'calc(100vh - ' + (footerPosition - lastSectionPosition) + 'px)';
+    </script>  
+</footer>

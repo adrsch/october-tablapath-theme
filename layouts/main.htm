@@ -20,15 +20,11 @@ description = "Main layout"
         
     </head>
     <body style="background-color: {{ this.theme.coverBackgroundColor }};">
-        <header>
-            {% partial 'site/header' %}
-        </header>
+        {% partial 'site/header' %}
         {% partial 'site/cover' %}
         <div id="main">
             {% page %}
-            <footer>
-                {% partial 'site/footer' %}
-            </footer>
+            {% partial 'site/footer' %}
         </div>
     </body>
 </html>
