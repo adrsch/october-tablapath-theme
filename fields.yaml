@@ -222,27 +222,14 @@ tabs:
             tab: Intro
             label: Background Color
             type: colorpicker
-            default: darkseagreen
-        coverOverlay:
+            default: darkseagreenx
+        coverInterval:
             tab: Intro
-            label: Overlay Color
-            type: colorpicker
-            default: darkseagreen
-        coverOverlayOpacity:
-            tab: Intro
-            label: Overlay Opacity
+            label: Interval between slides
             type: number
-        cover:
-            tab: Intro
-            label: Background Image
-            mode: image
-            type: mediafinder
-        useSlideShow:
-            tab: Intro
-            label: Use slide show?
-            type: switch
-            default: 0
-        coverSlideShow:
+            step: 1
+            default: 8000
+        coverSlides:
             tab: Intro
             label: Slide show images
             type: repeater

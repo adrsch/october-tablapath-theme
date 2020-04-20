@@ -1,6 +1,9 @@
 [viewBag]
 ==
 <div id="top">
+    {% for slide in this.theme.coverSlides %}
+    <div class="cover-background" style="background-image: url({{ slide.image | media }});"></div>
+    {% endfor %}
     <div id="cover" style="color: {{ this.theme.coverColor }};">
         {{ this.theme.coverContent | raw }}
     </div>
